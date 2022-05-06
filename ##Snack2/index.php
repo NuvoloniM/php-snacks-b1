@@ -38,7 +38,7 @@ $age = isset($_GET['age'])? $_GET['age'] : '';
     </form>
 
     <?php
-        if (strlen($name) > 3 && strpos($mail , '.') && strpos($mail , '@') && is_numeric($age)){
+        if (strlen($name) > 3 && strpos($mail , '.') !== FALSE && strpos($mail , '@') !== FALSE && is_numeric($age)){
             echo "<p>Accesso Riuscito</p>";
         } else {
             echo "<p>Accesso negato</p>";
